@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*3.2
+int main(void)
+{
+    int num;
+    printf("Please enter the ASCII code value: \n");
+    scanf("%d", &num);
+    printf("%c", num);
+    return 0;
+}
+*/
+
+/*3.3
+int main(void)
+{
+    printf("\aStartled by the sudden sound, Sally shouted,\n");
+    printf("\"By the Great Pumpkin, what was that!\"\n");
+    return 0;
+}
+*/
+
+/*3.4
+int main(void)
+{
+    float value;
+    printf("Enter a floating point value:\n");
+    scanf("%f", &value);
+    printf("fixed point notation: %f\n", value);
+    printf("exponential notation: %e\n", value);
+    printf("p notation: %a\n", value);
+    return 0;
+}
+*/
+
+/*3.5
+int main(void)
+{
+    int age;
+    printf("Please insert your age: \n");
+    scanf("%d", &age);
+    printf("Your age in seconds is %e\n", age*3.156e7);
+    return 0;
+
+}
+*/
+
+/*3.6
+int main(void)
+{
+    unsigned int amount_quarts;
+    printf("Insert the amount of water: \n");
+    scanf("%u", &amount_quarts);
+    printf("The number of water molecules is %e", amount_quarts*950/3e-23);
+    return 0;
+}
+*/
+
+/*3.7
+int main(void)
+{
+    double height_centi;
+    printf("Please insert your height in centimeter: \n");
+    scanf("%lf", &height_centi);
+    printf("Your height in inch is %.2f\n", height_centi/2.54);
+    return 0;
+}
+*/
+
+/*3.8
+int main(void)
+{
+    double num_cups;
+    printf("Please insert your volume in cup: \n");
+    scanf("%lf", &num_cups);
+    printf("The volume in pints is %.2f\n", num_cups/2);
+    printf("The volume in ounce is %.2f\n", num_cups*8);
+    printf("The volume in tablespoons is %.2f\n", num_cups*8*2);
+    printf("The volume in teaspoon is %.2f\n", num_cups*8*2*3);
+    return 0;
+
+}
+*/
