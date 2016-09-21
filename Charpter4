@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include<string.h>
+#include<float.h>
 
 /*4.1
 int main(void)
@@ -105,7 +106,46 @@ int main(void)
 }
 */
 
+/*4.7
 int main(void)
 {
-    
+    double var1=1.0/3.0;
+    float var2=1.0/3.0;
+
+    printf("%.4f\t%.12f\t%.16f\n", var1,var1,var1);
+    printf("%.4f\t%.12f\t%.16f\n", var2,var2,var2);
+
+    printf("FLT is %d\n", FLT_DIG);
+    printf("DBL is %d\n", DBL_DIG);
+
+    return 0;
+
 }
+*/
+
+/*4.8
+#define GALLON_TO_LITER 3.785
+
+int main(void)
+{
+    double miles_travell;
+    double gallon_used;
+    double miles_per_gallon;
+    double liter_per_100km;
+
+    const double MILES_TO_KM=1.609;
+
+    printf("Please enter the number of miles traveled: \n");
+    scanf("%lf", &miles_travell);
+    printf("Please enter the number of gallons of gasoline consumed: \n");
+    scanf("%lf", &gallon_used);
+    miles_per_gallon=miles_travell/gallon_used;
+    printf("The Miles per Gallon is: %.1f\n",miles_per_gallon);
+
+    liter_per_100km=(gallon_used*GALLON_TO_LITER)/(miles_travell*MILES_TO_KM/100);
+    printf("The Liters per 100KM is: %.1f\n",liter_per_100km);
+
+    return 0;
+
+}
+*/
