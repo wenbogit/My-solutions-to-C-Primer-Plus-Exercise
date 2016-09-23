@@ -1,0 +1,111 @@
+#include <stdio.h>
+
+/*5.1
+const int HOUR_TO_MINUTE=60;
+
+int main(void)
+{
+    int minute;
+    int hour;
+    int time;
+
+    printf("Please insert the time:\n");
+    scanf("%d", &time);
+    while (time>0)
+    {
+        hour=time/HOUR_TO_MINUTE;
+        minute=time%HOUR_TO_MINUTE;
+        printf("The Hour: %d\tThe Minute: %d\n",hour,minute);
+        printf("Please insert the time:\n");
+        scanf("%d", &time);
+    }
+
+    printf("Error! Please check and insert again!\n");
+    return 0;
+
+}
+*/
+
+/*5.2
+int main(void)
+{
+    int num;
+    int num1;
+
+    printf("Please insert a number:\n");
+    scanf("%d", &num);
+    num1=num;
+
+    while(num++<num1+10)
+    {
+        printf("%d\n", num);
+    }
+    return 0;
+}
+*/
+
+/*5.3
+#define WEEK_TO_DAY 7
+int main(void)
+{
+    int day;
+    int week;
+    int num;
+
+    printf("Please insert the time: \n");
+    scanf("%d", &num);
+    while(num>0)
+    {
+        week=num/WEEK_TO_DAY;
+        day=num%WEEK_TO_DAY;
+        printf("%d days are %d weeks, %d days.\n",num,week,day);
+        printf("Please insert the time: \n");
+        scanf("%d", &num);
+    }
+    printf("Error!\n");
+    return 0;
+}
+*/
+
+/*5.4
+#define INCH_TO_CENTIMETRE 2.54
+#define FOOT_TO_INCH 12.0
+int main(void)
+{
+    float num_cm;
+    float num_inch;
+    int feet;
+    float inch;
+
+    printf("Enter a height in centimeters: ");
+    scanf("%f", &num_cm);
+    while(num_cm>0)
+    {
+        num_inch=num_cm/INCH_TO_CENTIMETRE;
+        feet=num_inch/FOOT_TO_INCH;
+        inch=num_inch-feet*FOOT_TO_INCH;
+        printf("%.1f cm = %d feet, %.1f inches\n", (int)num_cm/1*1.0,feet,inch);
+        printf("Enter a height in centimeters (<=0 to quit): ");
+        scanf("%f", &num_cm);
+    }
+    printf("bye\n");
+    return 0;
+}
+*/
+
+/*5.5
+int main(void)
+{
+    int count,sum,n;
+
+    printf("Please enter your number:\n");
+    scanf("%d", &n);
+    count=0;
+    sum=0;
+    while(count++<n)
+        sum=sum+count;
+    printf("sum = %d\n", sum);
+
+    return 0;
+}
+*/
