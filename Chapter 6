@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+
+
+/*6.1
+int main(void)
+{
+    const int SIZE=26;
+    char a[SIZE];
+    int i;
+
+    for(i=0,a[0]='a';i<SIZE;i++)
+        a[i+1]=a[i]+1;
+
+    for(i=0;i<SIZE;i++)
+        printf("%c", a[i]);
+        printf("\n");
+
+    return 0;
+
+}
+*/
+
+/*6.2
+int main(void)
+{
+    const int ROW=5;
+
+    int row;
+    int col;
+
+    for(row=0;row<ROW;row++)
+    {
+        for(col=row;col>=0;col--)
+            printf("$");
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+/*6.3
+int main(void)
+{
+    const int ROW=6;
+    const int COL=6;
+
+    int row;
+    char col;
+
+    for(row=0;row<ROW;row++)
+    {
+        for(col='F';col>='F'-row;col--)
+            printf("%c",col);
+        printf("\n");
+    }
+    return 0;
+}
+*/
