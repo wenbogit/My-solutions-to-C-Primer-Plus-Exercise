@@ -199,3 +199,160 @@ double calculate(double x,double y)
 }
 */
 
+/*6.10
+int main(void)
+{
+    int lower, upper;
+    int sum=0;
+    int i,j;
+
+    printf("Enter lower and upper integer limits: ");
+    scanf("%d %d", &lower, &upper);
+
+    while(upper>lower)
+    {
+        for(i=lower;i<=upper;i++)
+            {
+                sum=sum+i*i;
+            }
+
+        printf("The sum of the squares from %d to %d is %d\n", lower*lower,upper*upper,sum);
+        printf("Enter next set of limits: ");
+        scanf("%d %d", &lower, &upper);
+        sum=0;
+
+    }
+    printf("Done\n");
+    return 0;
+}
+*/
+
+/*6.11
+int main(void)
+{
+    int integer[8];
+    int i,j;
+
+    printf("Please enter 8 integers: \n");
+    for(i=0;i<8;i++)
+        scanf("%d", &integer[i]);
+    for(j=7;j>=0;j--)
+        printf("%d ", integer[j]);
+    return 0;
+
+}
+*/
+
+/*6.12
+#include <stdio.h>
+int main(void)
+{
+    float a,b;
+    int end;
+    printf("Enter the times of calculation:");
+    scanf("%d",&end);
+    for (a=0,b=1.0;b<=end ;b++ )
+    {
+        if (b/2!=0)
+            a+=1.0/b;
+        else
+            a-=1.0/b;
+    }
+    printf("%f",a);
+    return 0;
+}
+*/
+
+/*6.13
+int main(void)
+{
+    int i;
+    int sum=1;
+    int power_of_two[8];
+
+    for(i=0;i<8;i++)
+    {
+        power_of_two[i]=sum;
+        sum*=2;
+    }
+
+    i=0;
+    do
+    {
+        printf("%d ", power_of_two[i]);
+        i++;
+    }while(i<8);
+    printf("\n");
+    return 0;
+}
+*/
+
+/*6.14
+#define SIZE 8
+int main(void)
+{
+    double arr[SIZE];
+    double arr_cumul[SIZE];
+    int i;
+
+    printf("Enter %d numbers:\n", SIZE);
+
+    for (i = 0; i < SIZE; i++)
+    {
+        printf("value #%d: ", i + 1);
+        scanf("%lf", &arr[i]);
+    }
+
+    arr_cumul[0] = arr[0];      // set first element
+    for (i = 1; i < SIZE; i++)
+        arr_cumul[i] = arr_cumul[i-1] + arr[i];
+        for (i = 0; i < SIZE; i++)
+            printf("%8g ", arr[i]);
+        printf("\n");
+        for (i = 0; i < SIZE; i++)
+            printf("%8g ", arr_cumul[i]);
+        printf("\n");
+    return 0;
+}
+*/
+
+/*6.15
+int main(void)
+{
+    char ch[255];
+    int i,j;
+
+    printf("Please enter the texts: \n");
+    gets(ch);//successfully solve the problem
+
+    j=strlen(ch);
+    for(i=j-1;i>=0;i--)
+        printf("%c", ch[i]);
+
+    return 0;
+}
+*/
+
+/*6.16
+#define RATE_SIMP 0.10
+#define RATE_COMP 0.05
+#define INIT_AMT 100.0
+int main( void )
+{
+    double daphne = INIT_AMT;
+    double deidre = INIT_AMT;
+    int years = 0;
+
+    while (deidre <= daphne)
+    {
+        daphne += RATE_SIMP * INIT_AMT;
+        deidre += RATE_COMP * deidre;
+        years++;
+    }
+    printf("Investment values after %d years:\n", years);
+    printf("Daphne: $%.2f\n", daphne);
+    printf("Deidre: $%.2f\n", deidre);
+
+    return 0;
+}
+*/
