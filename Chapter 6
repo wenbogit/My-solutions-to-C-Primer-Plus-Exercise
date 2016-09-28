@@ -3,7 +3,6 @@
 #include<ctype.h>
 #include<stdbool.h>
 
-
 /*6.1
 int main(void)
 {
@@ -356,3 +355,38 @@ int main( void )
     return 0;
 }
 */
+
+/*6.17
+int main(void)
+{
+    int year=0;
+    float money=1000000;
+    while(money>=0)
+    {
+        money=money*1.08-100000;
+        year++;
+    }
+
+    printf("It takes %d years to empty the account.\n", year);
+    return 0;
+}
+
+*/
+
+/*6.18
+int main(void)
+{
+    int week=1;
+    int num=5;
+
+    while(num<=150)
+    {
+        num=(num-week)*2;
+        printf("Week %d\t%d friends.\n", week,num);
+        week++;
+    }
+
+return 0;
+}
+*/
+
