@@ -1,1 +1,199 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
 
+/*7.1
+int main(void)
+{
+    char ch;
+    int num_space=0;
+    int num_newline=0;
+    int num_other=0;
+
+    printf("Please enter the text: \n");
+
+    while((ch=getchar())!='#')
+    {
+        if(ch==' ')
+            num_space++;
+        else if(ch=='\n')
+            num_newline++;
+        else
+            num_other++;
+    }
+    printf("The number of spaces is %d.\nThe number of newline is %d.\nThe number of other character is %d.\n", num_space,num_newline,num_other);
+    return 0;
+}
+*/
+
+/*7.2
+int main(void)
+{
+    char ch;
+    int num=0;
+
+    printf("Please enter the texts.\n");
+    while((ch=getchar())!='#')
+    {
+        num++;
+        if(num%8!=0)
+        {
+            putchar(ch);
+            printf("%-5d", ch);
+        }
+        else
+        {
+            putchar(ch);
+            printf("%-5d", ch);
+            printf("\n");
+        }
+
+    }
+    return 0;
+}
+*/
+
+/*7.3
+int main(void)
+{
+    int a;
+    int num_even=0;
+    int num_odd=0;
+    int sum_even=0;
+    int sum_odd=0;
+
+
+    printf("Please enter integers: \n");
+
+    while(scanf("%d", &a)==1&&a!=0)
+    {
+        if(a%2==0)
+            {
+                num_even++;
+                sum_even+=a;
+            }
+        else
+            {
+                 num_odd++;
+                 sum_odd+=a;
+            }
+    }
+    printf("The total number of even integers are %d, the average value is %d.\nThe total number of odd integers are %d, the average value is %d.\n",num_even, sum_even/num_even, num_odd, sum_odd/num_odd);
+    return 0;
+}
+*/
+
+/*7.4
+int main(void)
+{
+    int sum=0;
+    char ch;
+
+    printf("Please enter the texts!\n");
+    while((ch=getchar())!='#')
+    {
+        if(ch=='.')
+        {
+            printf("!");
+            sum++;
+        }
+        else if(ch=='!')
+        {
+            printf("!!");
+            sum++;
+        }
+        else
+            putchar(ch);
+    }
+    printf("The number of substitutions is %d", sum);
+    return 0;
+}
+*/
+
+/*7.5
+int main(void)
+{
+    int sum=0;
+    char ch;
+
+    printf("Please enter the texts!\n");
+    while((ch=getchar())!='#')
+    {
+        switch(ch)
+        {
+            case'.': printf("!");
+                     sum++;
+                     break;
+
+            case'!': printf("!!");
+                     sum++;
+                     break;
+
+            default: putchar(ch);
+                     break;
+        }
+    }
+    printf("The number of substitutions is %d", sum);
+    return 0;
+}
+*/
+
+/*7.6
+int main(void)
+{
+    int num=0;
+    char ch;
+
+    while((ch=getchar())!='#')
+    {
+        if(ch=='e')
+        {
+            if(ch=getchar()=='i')
+            num++;
+        }
+    }
+    printf("The number of time sequence ei occurs: %d\n", num);
+    return 0;
+}
+*/
+
+/*7.7
+#define BASIC_PAY_RATE 10.00
+#define OVER_PAY_RATE 15.00
+#define FIRST_LEVEL_TAX 0.15
+#define SECOND_LEVEL_TAX 0.20
+#define THIRD_LEVEL_TAX 0.25
+int main(void)
+{
+    double hours, gross, tax, net;
+
+    printf("Please enter the hours that in a week: ");
+    scanf("%lf", &hours);
+
+    if(hours<40)
+    {
+        gross=hours*BASIC_PAY_RATE;
+        if(gross<300)
+            tax=gross*FIRST_LEVEL_TAX;
+        else if(gross<450)
+            tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+        else
+            tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+        net=gross-tax;
+    }
+    else
+    {
+        gross=40*BASIC_PAY_RATE+(hours-40)*OVER_PAY_RATE;
+        if(gross<300)
+            tax=gross*FIRST_LEVEL_TAX;
+        else if(gross<450)
+            tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+        else
+            tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+        net=gross-tax;
+    }
+    printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+    return 0;
+}
+*/
