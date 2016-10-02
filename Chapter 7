@@ -197,3 +197,246 @@ int main(void)
     return 0;
 }
 */
+
+/*7.8
+#define BASIC_PAY_RATE1 8.75
+#define BASIC_PAY_RATE2 9.33
+#define BASIC_PAY_RATE3 10.00
+#define BASIC_PAY_RATE4 11.20
+#define OVER_PAY_RATE 15.00
+#define FIRST_LEVEL_TAX 0.15
+#define SECOND_LEVEL_TAX 0.20
+#define THIRD_LEVEL_TAX 0.25
+int main(void)
+{
+    double hours, gross, tax, net;
+    int number;
+
+    printf("*****************************************************************\n");
+    printf("Enter the number corresponding to the desired pay rate or action:\n");
+    printf("1) $8.75/hr                         2) $9.33/hr\n");
+    printf("3) $10.00/hr                        4) $11.20/hr\n");
+    printf("5) quit\n");
+    printf("*****************************************************************\n");
+
+    while(scanf("%d", &number)==1&&number!=5)
+    {
+        switch(number)
+        {
+        case 1:
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE1;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE1+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the number corresponding to the desired pay rate or action:\n");
+
+                break;
+
+            case 2:
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE2;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE2+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the number corresponding to the desired pay rate or action:\n");
+
+                break;
+
+            case 3:
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE3;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE3+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the number corresponding to the desired pay rate or action:\n");
+
+                break;
+
+            case 4:
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE4;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE4+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the number corresponding to the desired pay rate or action:\n");
+
+                break;
+
+                default:
+                printf("Error! Please enter the a number between 1 to 4\n");
+                break;
+
+
+
+        }
+    }
+    return 0;
+
+}
+*/
+
+/*7.9
+int main(void)
+{
+    bool isPrime;
+    int i, j, num;
+
+    printf("Please enter a positive number: \n");
+    scanf("%d", &num);
+
+    for(;num>1;num--)
+    {
+        for(i=2,isPrime=true;i<num;i++)
+        {
+            if(num%i==0)
+            isPrime=false;
+
+        }
+        if(isPrime)
+            printf("%5d", num);
+    }
+    return 0;
+}
+*/
+
+/*7.10
+int main(void)
+{
+    float tax, income;
+    int category;
+
+    printf("Please enter your category (from 1 to 4): \n");
+    while(scanf("%d", &category)==1)
+    {
+        switch(category)
+        {
+        case 1:
+            printf("Please enter your taxable income: \n");
+            scanf("%f", &income);
+            if(income<17850)
+                tax=income*0.15;
+            else
+                tax=17850*0.15+(income-17850)*0.28;
+            printf("The tax is %.2f\n", tax);
+            printf("Please enter your category (from 1 to 4): \n");
+            break;
+
+        case 2:
+            printf("Please enter your taxable income: \n");
+            scanf("%f", &income);
+            if(income<23900)
+                tax=income*0.15;
+            else
+                tax=23900*0.15+(income-23900)*0.28;
+            printf("The tax is %.2f\n", tax);
+            printf("Please enter your category (from 1 to 4): \n");
+            break;
+
+        case 3:
+            printf("Please enter your taxable income: \n");
+            scanf("%f", &income);
+            if(income<29750)
+                tax=income*0.15;
+            else
+                tax=29750*0.15+(income-29750)*0.28;
+            printf("The tax is %.2f\n", tax);
+            printf("Please enter your category (from 1 to 4): \n");
+            break;
+
+        case 4:
+            printf("Please enter your taxable income: \n");
+            scanf("%f", &income);
+            if(income<14875)
+                tax=income*0.15;
+            else
+                tax=14875*0.15+(income-14875)*0.28;
+            printf("The tax is %.2f\n", tax);
+            printf("Please enter your category (from 1 to 4): \n");
+            break;
+
+        }
+    }
+    return 0;
+}
+*/
