@@ -87,3 +87,34 @@ char * getnchar(char * str, int n)
 }
 */
 
+/*11.3
+void first_word(char ch);
+
+int main(void)
+{
+    puts("Please enter your input:");
+    char ch1;
+    ch1=getchar();
+    first_word(ch1);
+
+    return 0;
+}
+
+void first_word(char ch)
+{
+
+    while(ch!=EOF)
+    {
+        if(isspace(ch))
+            break;
+        else
+        {
+            putchar(ch);
+            ch=getchar();
+        }
+    }
+    putchar('\n');
+    puts("Done.");
+
+}
+*/
