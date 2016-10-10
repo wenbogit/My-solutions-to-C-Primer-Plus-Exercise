@@ -159,3 +159,35 @@ char * s_gets(char *words, int n)
         return ans;
 }
 */
+
+/*11.5
+#define SIZE 30
+char *func_search(char *list, char j);
+
+int main(void)
+{
+    char t;
+    char lists[SIZE]= "This is bar test program.";
+    for(t='a';t<'c';t++)
+        func_search(lists, t);
+
+    return 0;
+}
+
+char *func_search(char *list, char j)
+{
+    int i;
+
+    for(i=0; i<SIZE; i++)
+    {
+        if(list[i]==j)
+    {
+        printf("The rest of the string should be: \n");
+        puts(list+i);
+        break;
+    }
+
+    }
+        return NULL;
+}
+*/
