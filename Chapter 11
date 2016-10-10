@@ -118,3 +118,44 @@ void first_word(char ch)
 
 }
 */
+
+/*11.4
+#define STLEN 40
+char * s_gets(char *words, int n);
+
+int main(void)
+{
+    int num;
+    char word[STLEN];
+    puts("Enter the limits of number can be read:");
+    scanf("%d", &num);
+    while(getchar()!='\n')
+        continue;
+
+    puts("Enter strings:");
+    if(s_gets(word, num))
+    {
+        puts(word);
+    }
+
+    return 0;
+}
+
+char * s_gets(char *words, int n)
+{
+    char *ans;
+    int i=0;
+    ans=fgets(words, n+1, stdin);
+    if(ans)
+        {
+            while(words[i]!='\n' && words[i]!= ' '&& words[i]!= '\0' && words[i]!= '\t')
+                i++;
+            if(words[i]=='\n'||words[i]==' '||words[i]=='\t')
+                words[i]='\0';
+            else
+                while(getchar()!='\n')
+                continue;
+        }
+        return ans;
+}
+*/
