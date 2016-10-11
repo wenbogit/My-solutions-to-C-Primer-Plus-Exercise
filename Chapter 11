@@ -191,3 +191,34 @@ char *func_search(char *list, char j)
         return NULL;
 }
 */
+
+/*11.6
+#define SIZE 30
+int is_within(char *list, char j);
+
+int main(void)
+{
+    char t;
+    char lists[SIZE]= "This is bar test program.";
+    for(t='a';t<='g';t++)
+    {
+        if(is_within(lists, t))
+        printf("The character %c is in the string.\n", t);
+    }
+
+    return 0;
+}
+
+int is_within(char *list, char j)
+{
+    int i;
+    int m;
+
+    for(i=0,m=0; i<SIZE; i++)
+    {
+        if(list[i]==j)
+            m=1;
+    }
+    return m;
+}
+*/
