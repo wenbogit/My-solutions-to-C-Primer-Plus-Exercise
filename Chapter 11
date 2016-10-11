@@ -222,3 +222,26 @@ int is_within(char *list, char j)
     return m;
 }
 */
+/*11.7
+#define SIZE 30
+char *mystrncpy(char *strDest , const char *strSrc , int n);
+
+int main(void)
+{
+    char lists[SIZE]= "This is bar test program.";
+    char ar[100];
+
+    mystrncpy(ar, lists, 10);
+    puts(ar);
+
+    return 0;
+}
+
+char *mystrncpy(char *strDest , const char *strSrc , int n)
+{
+    char *address = strDest;
+    while(n-- > 0)
+        *strDest++ = *strSrc++;
+    return address;
+}
+*/
