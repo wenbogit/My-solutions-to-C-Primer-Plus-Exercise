@@ -371,3 +371,167 @@ char * s_gets(char * st, int n)
         return ret_val;
 }
 */
+
+/*11.11
+#define MAX 3
+#define LEN 100
+
+void menu(void);
+void print_original(char *[],int);
+void print_ascii(char *[],int);
+void print_all_length(char *[],int);
+void print_first_length(char *[],int);
+
+int main(void)
+{
+        char input[MAX][LEN];
+        char *ptr[MAX];
+        int count=0;
+        int choice;
+
+        printf("Input some strings (less than %d)\n",MAX);
+        while(count<MAX && gets(input[count])!=NULL && input[count][0]!=EOF)
+        {
+                ptr[count]=input[count];
+                count++;
+        }
+
+        while(menu(),scanf("%d",&choice)==1)
+        {
+                switch(choice)
+                {
+                        case 1 : print_original(ptr,count);
+                                 break;
+                        case 2 : print_ascii(ptr,count);
+                                 break;
+                        case 3 : print_all_length(ptr,count);
+                                 break;
+                        case 4 : print_first_length(ptr,count);
+                                 break;
+                        case 5 : return 0;
+                                 break;
+                        default : continue;
+                }
+        }
+
+        return 0;
+}
+
+void menu(void)
+{
+        printf("========================================================================\n");
+        printf(" 1) print the original list of strings\n");
+        printf(" 2) print the strings in ASCII collating sequence\n");
+        printf(" 3) print the strings in order of increasing length\n");
+        printf(" 4) print the strings in order of the length of the first word in string\n");
+        printf(" 5) quit\n");
+        printf("========================================================================\n");
+}
+
+void print_original(char *str[],int n)
+{
+        int i=0;
+
+        while(i<n)
+                puts(str[i++]);
+}
+
+void print_ascii(char *str[],int n)
+{
+        int i,j;
+        char *temp;
+        char *ptr[n];
+
+        for(i=0;i<n;i++)
+                ptr[i]=str[i];
+
+        for(i=0;i<n;i++)
+                for(j=i;j<n;j++)
+                        if(strcmp(ptr[i],ptr[j])>0)
+                        {
+                                temp=ptr[i];
+                                ptr[i]=ptr[j];
+                                ptr[j]=temp;
+                        }
+        for(i=0;i<n;i++)
+                puts(ptr[i]);
+}
+
+void print_all_length(char *str[],int n)
+{
+        int i,j;
+        char *temp;
+        char *ptr[n];
+
+        for(i=0;i<n;i++)
+                ptr[i]=str[i];
+
+        for(i=0;i<n;i++)
+                for(j=i;j<n;j++)
+                        if(strlen(ptr[i])>strlen(ptr[j]))
+                        {
+                                temp=ptr[i];
+                                ptr[i]=ptr[j];
+                                ptr[j]=temp;
+                        }
+        for(i=0;i<n;i++)
+                puts(ptr[i]);
+}
+
+void print_first_length(char *str[],int n)
+{
+
+        int len[n];
+        int i,j;
+        char *start,*end,*temp;
+        char *ptr[n];
+
+        for(i=0;i<n;i++)
+                ptr[i]=str[i];
+
+        for(i=0;i<n;i++)
+        {
+                temp=ptr[i];
+                if(isspace(*temp))
+                {
+                        while(isspace(*temp))
+                                temp++;
+                        start=temp;
+                        for(;;temp++)
+                        {
+                                if(isspace(*temp) || *temp=='\0')
+                                {
+                                        end=temp;
+                                        break;
+                                }
+                        }
+                }
+                else
+                {
+                        start=temp;
+                        for(;;temp++)
+                        {
+                                if(isspace(*temp) || *temp=='\0')
+                                {
+                                        end=temp;
+                                        break;
+                                }
+                        }
+                }
+                len[i]=end-start;
+        }
+        for(i=0;i<n;i++)
+                printf("%d\n",len[i]);
+        for(i=0;i<n;i++)
+                for(j=i;j<n;j++)
+                        if(len[i]>len[j])
+                        {
+                                temp=ptr[i];
+                                ptr[i]=ptr[j];
+                                ptr[j]=temp;
+                        }
+
+        for(i=0;i<n;i++)
+                puts(ptr[i]);
+}
+*/
