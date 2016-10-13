@@ -572,3 +572,23 @@ int main(void)
         return 0;
 }
 */
+/*11.13
+int main(int argc, char *argv[])
+{
+    int i,j;
+
+    printf("The original arguments are: \n");
+
+    for(i=1; i<argc; i++)
+        printf("%s ", argv[i]);
+    putchar('\n');
+
+    printf("The reversed word order should be: \n");
+
+    for(j=argc-1; j>0; j--)
+        printf("%s ", argv[j]);
+
+    return 0;
+
+}
+*/
