@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
+#include <assert.h>
+#include <stdbool.h>
+#include <math.h>
 
 /*11.1
 #define LEN 10
@@ -222,6 +226,7 @@ int is_within(char *list, char j)
     return m;
 }
 */
+
 /*11.7
 #define SIZE 30
 char *mystrncpy(char *strDest , const char *strSrc , int n);
@@ -245,6 +250,7 @@ char *mystrncpy(char *strDest , const char *strSrc , int n)
     return address;
 }
 */
+
 /*11.8
 #define LEN 20
 char * string_in(const char * s1, const char * s2);
@@ -311,6 +317,7 @@ char *reversed(char *strDest , const char *strSrc , int n)
     return address;
 }
 */
+
 /*11.10
 #define LEN 81
 char* drop_space(char * s);
@@ -572,6 +579,8 @@ int main(void)
         return 0;
 }
 */
+
+
 /*11.13
 int main(int argc, char *argv[])
 {
@@ -592,6 +601,7 @@ int main(int argc, char *argv[])
 
 }
 */
+
 /*11.14
 int main(int argc, char **argv)
 {
@@ -610,6 +620,7 @@ int main(int argc, char **argv)
     return 0;
 }
 */
+
 /*11.15
 int main(int argc, char *argv[])
 {
@@ -627,6 +638,7 @@ int main(int argc, char *argv[])
         return 0;
 }
 */
+
 /*11.16
 int main(int argc, char *argv[])
 {
