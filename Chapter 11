@@ -592,3 +592,21 @@ int main(int argc, char *argv[])
 
 }
 */
+/*11.14
+int main(int argc, char **argv)
+{
+    double a;
+    int b;
+    double ans;
+
+
+    a=atof(argv[1]);
+    b=atoi(argv[2]);
+
+    ans=pow(a, b);
+
+    printf("The final answer should be: \n%.1f", ans);
+
+    return 0;
+}
+*/
