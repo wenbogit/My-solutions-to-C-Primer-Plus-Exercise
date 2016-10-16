@@ -125,16 +125,329 @@ int getfirst(void)
     return ch;
 }
 */
-/*8.6
-int getfirst(void)
-{
-    int ch;
 
-    ch=getchar();
-    while(isspace(ch))
-        ch=getchar();
-    while(getchar()!='\n')
-        continue;
-    return ch;
+/*8.7
+#define BASIC_PAY_RATE1 8.75
+#define BASIC_PAY_RATE2 9.33
+#define BASIC_PAY_RATE3 10.00
+#define BASIC_PAY_RATE4 11.20
+#define OVER_PAY_RATE 15.00
+#define FIRST_LEVEL_TAX 0.15
+#define SECOND_LEVEL_TAX 0.20
+#define THIRD_LEVEL_TAX 0.25
+int main(void)
+{
+    double hours, gross, tax, net;
+    char characters;
+
+    printf("*****************************************************************\n");
+    printf("Enter the characters corresponding to the desired pay rate or action:\n");
+    printf("a) $8.75/hr                         b) $9.33/hr\n");
+    printf("c) $10.00/hr                        d) $11.20/hr\n");
+    printf("q) quit\n");
+    printf("*****************************************************************\n");
+
+    while(scanf("%c", &characters)==1&&characters!='q')
+    {
+        switch(characters)
+        {
+        case 'a':
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE1;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE1+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the characters corresponding to the desired pay rate or action:\n");
+                while(getchar()!='\n')
+                    continue;
+
+                break;
+
+            case 'b':
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE2;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE2+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the characters corresponding to the desired pay rate or action:\n");
+                while(getchar()!='\n')
+                    continue;
+
+                break;
+
+            case 'c':
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE3;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE3+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the characters corresponding to the desired pay rate or action:\n");
+                while(getchar()!='\n')
+                    continue;
+
+                break;
+
+            case 'd':
+            printf("Please enter the hours that in a week: ");
+            scanf("%lf", &hours);
+            if(hours<40)
+                {
+                    gross=hours*BASIC_PAY_RATE4;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                else
+                {
+                    gross=40*BASIC_PAY_RATE4+(hours-40)*OVER_PAY_RATE;
+                    if(gross<300)
+                        tax=gross*FIRST_LEVEL_TAX;
+                    else if(gross<450)
+                        tax=300*FIRST_LEVEL_TAX+(gross-300)*SECOND_LEVEL_TAX;
+                    else
+                        tax=300*FIRST_LEVEL_TAX+150*SECOND_LEVEL_TAX+(gross-450)*THIRD_LEVEL_TAX;
+                    net=gross-tax;
+                }
+                printf("The gross pay is: %.2f\nThe taxes is: %.2f\nThe net pay is: %.2f\n", gross, tax, net);
+                printf("Enter the characters corresponding to the desired pay rate or action:\n");
+                while(getchar()!='\n')
+                    continue;
+
+                break;
+
+                default:
+                printf("Error! Please enter the a characters between a to d\n");
+                while(getchar()!='\n')
+                    continue;
+
+                break;
+
+
+
+        }
+    }
+    return 0;
+
+}
+*/
+
+/*8.8
+int main(void)
+{
+  char choice;
+  float number1, number2, answer;
+  printf("Enter the operation of your choice:\n");
+  printf("a. add           s. subtract\n");
+  printf("m. multiply      d. divide\n");
+  printf("q. quit\n");
+
+  while((choice=getchar())!='q')
+  {
+      switch(choice)
+      {
+      case 'a':
+          printf("Enter the first number: ");
+          while(scanf("%f", &number1)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+          printf("Enter the second number: ");
+
+          while(scanf("%f", &number2)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+
+          answer=number1+number2;
+
+          printf("%.1f + %.1f = %.1f\n", number1, number2, answer);
+          printf("Enter the operation of your choice:\n");
+          printf("a. add           s. subtract\n");
+          printf("m. multiply      d. divide\n");
+          printf("q. quit\n");
+          while(getchar()!='\n')
+                continue;
+          break;
+
+      case 's':
+          printf("Enter the first number: ");
+          while(scanf("%f", &number1)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+          printf("Enter the second number: ");
+
+          while(scanf("%f", &number2)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+
+          answer=number1-number2;
+
+          printf("%.1f - %.1f = %.1f\n", number1, number2, answer);
+          printf("Enter the operation of your choice:\n");
+          printf("a. add           s. subtract\n");
+          printf("m. multiply      d. divide\n");
+          printf("q. quit\n");
+          while(getchar()!='\n')
+                continue;
+          break;
+
+      case 'm':
+          printf("Enter the first number: ");
+          while(scanf("%f", &number1)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+          printf("Enter the second number: ");
+
+          while(scanf("%f", &number2)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+
+          answer=number1*number2;
+
+          printf("%.1f * %.1f = %.1f\n", number1, number2, answer);
+          printf("Enter the operation of your choice:\n");
+          printf("a. add           s. subtract\n");
+          printf("m. multiply      d. divide\n");
+          printf("q. quit\n");
+          while(getchar()!='\n')
+                continue;
+          break;
+
+      case 'd':
+          printf("Enter the first number: ");
+          while(scanf("%f", &number1)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+          printf("Enter the second number: ");
+
+          if(scanf("%f", &number2)!=1)
+          {
+              printf("It is not a number.\nPlease enter a number, such as 2.5:");
+              while(getchar()!='\n')
+                continue;
+          }
+
+          else
+          {
+              if(number2==0)
+                printf("Enter a number other than 0: ");
+                while(getchar()!='\n')
+                    continue;
+                scanf("%f", &number2);
+          }
+
+
+          answer=number1/number2;
+
+          printf("%.1f / %.1f = %.1f\n", number1, number2, answer);
+          printf("Enter the operation of your choice:\n");
+          printf("a. add           s. subtract\n");
+          printf("m. multiply      d. divide\n");
+          printf("q. quit\n");
+          while(getchar()!='\n')
+                continue;
+          break;
+
+       default:
+           printf("Error! Please enter again: ");
+           while(getchar()!='\n')
+            continue;
+
+           break;
+
+      }
+  }
+  printf("Bye.\n");
+  return 0;
 }
 */
