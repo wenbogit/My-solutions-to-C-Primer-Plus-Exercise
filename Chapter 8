@@ -125,3 +125,16 @@ int getfirst(void)
     return ch;
 }
 */
+/*8.6
+int getfirst(void)
+{
+    int ch;
+
+    ch=getchar();
+    while(isspace(ch))
+        ch=getchar();
+    while(getchar()!='\n')
+        continue;
+    return ch;
+}
+*/
