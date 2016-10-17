@@ -27,3 +27,69 @@ double min(double a, double b)
     return min;
 }
 */
+
+/*9.2
+void chline(char ch, int i, int j);
+int main(void)
+{
+    int row, column;
+    char ch;
+
+    printf("Enter the character you want to print: \n");
+    ch=getchar();
+    printf("Enter the row and column: \n");
+    scanf("%d%d", &row, &column);
+
+    chline(ch, row, column);
+
+    return 0;
+
+}
+
+void chline(char ch, int i, int j)
+{
+    int countr, countc;
+
+    for(countr=0;countr<i;countr++)
+    {
+        for(countc=0;countc<j;countc++)
+            printf("%c", ch);
+        printf("\n");
+
+    }
+}
+*/
+
+/*9.3
+void chline(char ch, int i, int j);
+int main(void)
+{
+    int row, column;
+    char ch;
+
+    printf("Enter the character you want to print: \n");
+    ch=getchar();
+    printf("Enter the the number of times that the character is to be printed on a line: \n");
+    scanf("%d", &column);
+    printf("Enter the number of lines to be printed: \n");
+    scanf("%d", &row);
+
+    chline(ch, row, column);
+
+    return 0;
+
+}
+
+void chline(char ch, int i, int j)
+{
+    int countr, countc;
+
+    for(countr=0;countr<i;countr++)
+    {
+        for(countc=0;countc<j;countc++)
+            printf("%c", ch);
+        printf("\n");
+
+    }
+}
+*/
