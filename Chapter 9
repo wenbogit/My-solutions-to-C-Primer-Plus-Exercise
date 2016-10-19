@@ -114,3 +114,27 @@ double hamonic_mean(double a, double b)
     return ans;
 }
 */
+/*9.5
+double larger_of(double a, double b);
+int main(void)
+{
+    double x, y;
+
+    printf("Please enter two numbers: \n");
+    scanf("%lf%lf", &x, &y);
+    printf("The maximum of tow value is %.2f.\n", larger_of(x,y));
+
+    return 0;
+}
+
+double larger_of(double a, double b)
+{
+    double ans;
+    if (a>b)
+        ans=a;
+    else
+        ans=b;
+
+    return ans;
+}
+*/
