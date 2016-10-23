@@ -93,6 +93,7 @@ void chline(char ch, int i, int j)
     }
 }
 */
+
 /*9.4
 double hamonic_mean (double a, double b);
 int main(void)
@@ -114,6 +115,7 @@ double hamonic_mean(double a, double b)
     return ans;
 }
 */
+
 /*9.5
 double larger_of(double a, double b);
 int main(void)
@@ -138,6 +140,7 @@ double larger_of(double a, double b)
     return ans;
 }
 */
+
 /*9.6
 void exchange(double *a, double *b, double *c);
 int main(void)
@@ -247,6 +250,7 @@ double power(double a, int b)
     return pow;
 }
 */
+
 /*9.9
 double power(double a, int b);
 int main(void)
@@ -292,6 +296,7 @@ double power(double a, int b)
 
     return pow;
 }
+*/
 
 /*9.10
 void to_base(unsigned long number, int base);
@@ -325,6 +330,7 @@ void to_base(unsigned long number, int base)
 
 }
 */
+
 /*9.11
 void Fibonacci(int n);
 int main(void)
