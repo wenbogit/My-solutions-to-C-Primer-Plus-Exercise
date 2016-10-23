@@ -292,3 +292,36 @@ double power(double a, int b)
 
     return pow;
 }
+
+/*9.10
+void to_base(unsigned long number, int base);
+int main(void)
+{
+    unsigned long number;
+    int base;
+
+    printf("Enter an integer (q to quit):\n");
+    while(scanf("%lu", &number)==1)
+    {
+        printf("Enter the base: \n");
+        scanf("%d", &base);
+        to_base(number,base);
+        printf("\n");
+    printf("Enter an integer (q to quit):\n");
+
+    }
+    printf("Done\n");
+    return 0;
+
+}
+
+void to_base(unsigned long number, int base)
+{
+    int n;
+    n=number%base;
+    if(number>=2)
+        to_base(number/base, base);
+    putchar('0'+n);
+
+}
+*/
