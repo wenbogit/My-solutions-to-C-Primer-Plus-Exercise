@@ -97,3 +97,40 @@ void copy_ptrs(double *target3, double *souce, int index)
     }
 }
 */
+/*10.3
+#define INDEX 10
+void show(int *a, int index);
+int maximum(const int a[], int index);
+int main(void)
+{
+    int max;
+    int value[INDEX]={4,3,4,565,45,32,54,75,432,999};
+    printf("The original numbers are: \n");
+    show(value, INDEX);
+    putchar('\n');
+    max=maximum(value, INDEX);
+    printf("The max number is %d\n", max);
+
+    return 0;
+}
+
+void show(int *a, int index)
+{
+    int i;
+    for(i=0;i<index;i++)
+        printf("%d ", *(a+i));
+}
+
+int maximum(const int a[], int index)
+{
+    int j, max;
+    max=a[0];
+
+    for(j=1;j<index;j++)
+    {
+        if(max<a[j])
+            max=a[j];
+    }
+    return max;
+}
+*/
