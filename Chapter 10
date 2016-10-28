@@ -178,3 +178,48 @@ double maximum(const double a[], int index)
 
 }
 */
+/*10.5
+#define INDEX 10
+void show(double *a, int index);
+double maximum(const double a[], int index);
+int main(void)
+{
+    double ans;
+    double value[INDEX]={4.4,3.5,4.5,565.3,45.3,32.5,54.5,75.8,432.4,99.7};
+    printf("The original numbers are: \n");
+    show(value, INDEX);
+    putchar('\n');
+    ans=maximum(value, INDEX);
+    printf("The difference between the largest and smallest elements is %.1f\n", ans);
+
+    return 0;
+}
+
+void show(double *a, int index)
+{
+    int i;
+    for(i=0;i<index;i++)
+        printf("%.1f ", *(a+i));
+}
+
+double maximum(const double a[], int index)
+{
+    int j,ans;
+    double max=a[0];
+    double min=a[9];
+
+    for(j=1;j<index;j++)
+    {
+        if(max<a[j])
+            max=a[j];
+    }
+
+    for(j=8;j>=0;j--)
+    {
+        if(min>a[j])
+            min=a[j];
+    }
+    return max-min;
+
+}
+*/
