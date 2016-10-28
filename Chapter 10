@@ -263,3 +263,32 @@ void transfer(double a[], int index)
 
 }
 */
+/*10.7
+#define ROWS 5
+#define COLS 2
+void copy_arr(double target1[][2], int rows);
+
+int main(void)
+{
+    double source[ROWS][COLS]={{1.1,1.0}, {2.2,2.0}, {3.3,3.0}, {4.4,4.0}, {5.5,5.0}};
+
+    printf("The copied answer should be: \n");
+    copy_arr(source, ROWS);
+
+    return 0;
+}
+
+void copy_arr(double target1[][2], int rows)
+{
+    int r;
+    int c;
+
+    for(r=0;r<rows;r++)
+    {
+        for(c=0;c<COLS;c++)
+        printf("%.1f ", target1[r][c]);
+        putchar('\n');
+    }
+
+}
+*/
