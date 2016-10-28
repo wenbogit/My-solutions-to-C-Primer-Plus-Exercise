@@ -134,3 +134,47 @@ int maximum(const int a[], int index)
     return max;
 }
 */
+/*10.4
+#define INDEX 10
+void show(double *a, int index);
+double maximum(const double a[], int index);
+int main(void)
+{
+    int ans;
+    double value[INDEX]={4.4,3.5,4.5,565.3,45.3,32.5,54.5,75.8,432.4,99.7};
+    printf("The original numbers are: \n");
+    show(value, INDEX);
+    putchar('\n');
+    ans=maximum(value, INDEX);
+    printf("The index of the max number is %d\n", ans);
+
+    return 0;
+}
+
+void show(double *a, int index)
+{
+    int i;
+    for(i=0;i<index;i++)
+        printf("%.1f ", *(a+i));
+}
+
+double maximum(const double a[], int index)
+{
+    int j,ans;
+    double max;
+    max=a[0];
+
+    for(j=1;j<index;j++)
+    {
+        if(max<a[j])
+            max=a[j];
+    }
+    for(j=0;j<index;j++)
+    {
+        if(a[j]==max)
+            ans=j+1;
+    }
+    return ans;
+
+}
+*/
