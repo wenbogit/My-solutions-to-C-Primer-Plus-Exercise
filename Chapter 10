@@ -223,3 +223,43 @@ double maximum(const double a[], int index)
 
 }
 */
+
+/*10.6
+#define INDEX 10
+void show(double *a, int index);
+void transfer(double a[], int index);
+
+int main(void)
+{
+    double value[INDEX]={4.4,3.5,4.5,565.3,45.3,32.5,54.5,75.8,432.4,99.7};
+    printf("The original numbers are: \n");
+    show(value, INDEX);
+    putchar('\n');
+    putchar('\n');
+    printf("The reverse contents of the array is: \n");
+    transfer(value, INDEX);
+    putchar('\n');
+
+    return 0;
+}
+
+void show(double *a, int index)
+{
+    int i;
+    for(i=0;i<index;i++)
+        printf("%.1f ", *(a+i));
+}
+
+void transfer(double a[], int index)
+{
+    int i,j;
+    double b[10];
+    for(i=0,j=9;i<index,j>=0;i++,j--)
+    {
+        b[j]=a[i];
+    }
+    for(j=0;j<index;j++)
+        printf("%.1f ", b[j]);
+
+}
+*/
