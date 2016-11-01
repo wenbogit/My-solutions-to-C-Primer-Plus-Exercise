@@ -317,3 +317,47 @@ void copy_arr(const double target[3], int index)
     }
 }
 */
+/*10.9
+void copy(int row,int col,double original[row][col]);
+void display(int row,int col,double display[row][col]);
+
+int main(void)
+{
+    int r=3;
+    int c=5;
+
+    double originals[3][5]={{1.1,2.1,3.1,4.1,5.1},{1.2,2.2,3.2,4.2,5.2},{1.3,2.3,3.3,4.3,5.3}};
+
+    printf("The original value should be: \n");
+    display(r,c,originals);
+    putchar('\n');
+
+    printf("The copied value should be: \n");
+    copy(r,c,originals);
+
+    return 0;
+}
+
+void copy(int row,int col,double original[row][col])
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+            printf("%.1f ", original[i][j]);
+        putchar('\n');
+    }
+
+}
+
+void display(int row,int col,double display[row][col])
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+            printf("%.1f ", display[i][j]);
+        putchar('\n');
+    }
+}
+*/
