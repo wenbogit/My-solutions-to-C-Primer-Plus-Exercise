@@ -292,3 +292,28 @@ void copy_arr(double target1[][2], int rows)
 
 }
 */
+/*10.8
+#define INDEX 3
+void copy_arr(const double target[3], int index);
+
+int main(void)
+{
+    double source[7]={1.1,2.2,3.3,4.4,5.5,6.6,7.7};
+
+    printf("The answer should be: \n");
+    copy_arr(&source[2], INDEX);
+
+    putchar('\n');
+
+    return 0;
+}
+
+void copy_arr(const double target[3], int index)
+{
+    int i;
+    for(i=0;i<index;i++)
+    {
+        printf("%.1f ", target[i]);
+    }
+}
+*/
