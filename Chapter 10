@@ -361,3 +361,29 @@ void display(int row,int col,double display[row][col])
     }
 }
 */
+/*10.10
+#define SIZE 4
+void sum(int a1[], int a2[], int a3[], int size);
+int main(void)
+{
+    int array1[SIZE]={2,4,5,8};
+    int array2[SIZE]={1,0,4,6};
+
+    int array3[SIZE];
+    printf("The value of array 3 should be: \n");
+    sum(array1, array2, array3, SIZE);
+
+    return 0;
+}
+
+void sum(int a1[], int a2[], int a3[], int size)
+{
+    int i;
+    for(i=0;i<size;i++)
+    {
+        a3[i]=a1[i]+a2[i];
+        printf("%d ", a3[i]);
+    }
+    putchar('\n');
+}
+*/
