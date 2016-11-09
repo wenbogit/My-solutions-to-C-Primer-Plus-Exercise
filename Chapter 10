@@ -97,6 +97,7 @@ void copy_ptrs(double *target3, double *souce, int index)
     }
 }
 */
+
 /*10.3
 #define INDEX 10
 void show(int *a, int index);
@@ -134,6 +135,7 @@ int maximum(const int a[], int index)
     return max;
 }
 */
+
 /*10.4
 #define INDEX 10
 void show(double *a, int index);
@@ -178,6 +180,7 @@ double maximum(const double a[], int index)
 
 }
 */
+
 /*10.5
 #define INDEX 10
 void show(double *a, int index);
@@ -263,6 +266,7 @@ void transfer(double a[], int index)
 
 }
 */
+
 /*10.7
 #define ROWS 5
 #define COLS 2
@@ -292,6 +296,7 @@ void copy_arr(double target1[][2], int rows)
 
 }
 */
+
 /*10.8
 #define INDEX 3
 void copy_arr(const double target[3], int index);
@@ -317,6 +322,7 @@ void copy_arr(const double target[3], int index)
     }
 }
 */
+
 /*10.9
 void copy(int row,int col,double original[row][col]);
 void display(int row,int col,double display[row][col]);
@@ -361,6 +367,7 @@ void display(int row,int col,double display[row][col])
     }
 }
 */
+
 /*10.10
 #define SIZE 4
 void sum(int a1[], int a2[], int a3[], int size);
@@ -387,6 +394,7 @@ void sum(int a1[], int a2[], int a3[], int size)
     putchar('\n');
 }
 */
+
 /*10.11
 #define ROW 3
 #define COL 5
@@ -430,6 +438,7 @@ void double_value(int val_double[][COL], int rows)
 
 }
 */
+
 /*10.12
 #define MONTHS 12
 #define YEARS 5
@@ -489,6 +498,7 @@ void month_data(const float rain[][12])
     printf("\n");
 }
 */
+
 /*10.13
 #include <stdio.h>
 #define ROWS 3
@@ -581,6 +591,7 @@ double max2d(int rows, int cols, double ar[][COLS])
     return max;
 }
 */
+
 /*10.14
 #include <stdio.h>
 #define ROWS 3
